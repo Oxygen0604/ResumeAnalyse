@@ -13,6 +13,7 @@ const Upload: React.FC = () => {
     const [file, setFile] = useState<File|null>(null);
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+        console.log(file);
         if (file) {
             uploadFile(file);
         }

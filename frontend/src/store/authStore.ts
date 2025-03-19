@@ -30,13 +30,13 @@ const useAuthStore = create<AuthState>()(
       isAuthenticated: false,
       token: null,
       isAdmin: false,
-      login: async (identifier: string, password: string) => {
+      login: async (username: string, password: string) => {
         try {
           const res = await axios.post(
             "http://localhost:5000/api/login",
-            { identifier, password }
+            { username, password }
           );
-          const token = res.data.token;
+          const token = res.data.access_token;
           const isAdmin = res.data.isAdmin;
           Cookies.set("access-token", token, { expires: 7 });
           set({ isAuthenticated: true, token, isAdmin });

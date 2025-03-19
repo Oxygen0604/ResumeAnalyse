@@ -21,11 +21,10 @@ const useFileStore = create<FileStore>()(
     (set, get) => ({
         file: { id: 0, data: null },
         uploadFile: async (file: any) => {
-            const formData = new FormData();
-            formData.append('file', file.data);
-            axios.post('/api/upload', formData, {
+            // const formData = new FormData();
+            // formData.append('file', file.data);
+            axios.post('http://localhost:5000/api/resumes/upload', file.data, {
                 headers: {
-                    'Content-Type':'multipart/form-data',
                     'Authorization': `Bearer ${Cookies.get('access_token')}`
                 }
             }).then(response => {

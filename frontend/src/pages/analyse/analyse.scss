@@ -4,40 +4,19 @@ body{
 
 .analyse{
     display: flex;
+        background: #0d3ca9;
 
     ::-webkit-scrollbar{
         display: none;
     }
 
-    .container{
+    .content{
         display: flex;
         position: relative;
         left: 94px;
         width: calc(100% - 94px);
         height: 100%;
         overflow-y: scroll;
-
-        .header{
-            display: flex;
-            width: 100%;
-            height: 60px;
-            justify-content: center;
-            align-items: center;
-            background-color: #c1c0ea8f;
-            border-end-start-radius: 100px;
-            border-end-end-radius: 100px;
-            cursor: default;
-            
-            .title{
-                font-size: 24px;
-                font-weight: bold;
-                color: #6b6a8fc9;
-            }
-
-        }
-
-        .content{
-            display: flex;
-        }
+        background: #0d3ca9;
     }
 }
